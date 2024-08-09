@@ -1,0 +1,50 @@
+Tufts CS 131: Artificial Intelligence
+Homework 3: Genetic Algorithms
+By Zeno Marquis
+3/19/2024
+
+Project:
+Using a genetic algorithm to solve the knapsack problem for a given
+knapsack and set of boxes
+
+Overview:
+This program implements a genetic algorithm to solve the knapsack problem for
+a knapsack with carrying capacity 250. The set of boxes that can be put in the
+knapsack are visible at:
+https://canvas.tufts.edu/courses/53836/assignments/398375
+
+The program runs 50 rounds of evolution on a population of size 100.
+The genomes of each individual represent a set of boxes, where the genome 01...
+would represent excluding the first box, including the second, and so on.
+
+Assumptions:
+This program supports one user at a time interacting through the terminal. 
+The genetic algorithm implementation assumes the system has the ability to
+generate random numbers based on the time and relies on long-run convergence
+on a solution. Because the program is non-deterministic, there is a small
+chance it doesn't reach the optimal solution (44) at some point within the 
+evolutionary time frame. In testing, this happened only once in around 200
+tests.
+
+Usage:
+Use the command "make" or "make Evolve" to compile the executable, and 
+"./Evolve" to run it. No additional command line arguments are needed to
+run the program, and it runs on its own without user input.
+
+Files:
+    Individual.hpp - class header representing an individual in the population
+
+    main.cpp - main file for the program
+
+    Makefile - builds the program
+
+
+Testing:
+The results of running the program 100 times are available in the file 
+100tests.txt (included in this folder). As is evident in the file, the program
+does not create an optimal final population every time, but consistently creates
+at least a near-optimal population. The results of running the program once are
+contained in the file evolveout.txt.
+
+
+
